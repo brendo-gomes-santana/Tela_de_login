@@ -22,6 +22,12 @@ class Usercontroller {
             email
         })
     }
+
+    async show(req,res){
+        const user = await User.findByPk(req.userId)
+
+        return res.json(user)
+    }
 }
 
 module.exports = new Usercontroller();
