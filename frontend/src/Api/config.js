@@ -20,3 +20,7 @@ export const session = async(email, password) => {
         password,
     })
 }
+
+export const inforUsuario = async () => {
+    return api.get('/user')
+}

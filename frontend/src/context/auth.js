@@ -14,9 +14,11 @@ export const AuthProvider = ({children}) => {
 
     useEffect(()=> {
         const recoveredUser = localStorage.getItem("user");
+        const token = localStorage.getItem("token")
 
         if(recoveredUser){
             setUser(JSON.parse(recoveredUser))
+            api.defaults.headers.Authorization = `Bearer ${token}`;
         }
         setLoading(false);
     }, [])
@@ -28,15 +30,11 @@ export const AuthProvider = ({children}) => {
         const token = response.data.token;
 
         localStorage.setItem("user", JSON.stringify(loggedUser));
-        localStorage.setItem("token", token)
-
+        localStorage.setItem("token", token);
         api.defaults.headers.Authorization = `Bearer ${token}`;
-
-
         setUser(loggedUser);
         navigate('/');
 
-        return
     };
 
     const logout = () => {

@@ -3,13 +3,15 @@ import { AuthContext } from '../../context/auth';
 
 import { RxExit } from 'react-icons/rx';
 
+import './style.scss';
+
 export default function Index() {
   const { logout } = useContext(AuthContext);
 
 
   return (
     <header>
-        <h1>Bem vindo</h1>
+        <h1>Cadastramento</h1>
         <span onClick={()=> {logout()}}><RxExit/></span>
     </header>
   )
