@@ -1,0 +1,72 @@
+.containerLogin{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    section{
+        width: 50%;
+        text-align: center;
+        h2{
+            font-size: 50px;
+            margin-bottom: 1rem;
+            letter-spacing: 15px;
+            font-style: italic;
+        }
+    }
+}
+.formLogin{
+    width: 100%;
+    padding: 3rem;
+    background-color: aliceblue;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 9rem 12px ;
+    .field{
+        display: flex;
+        align-items: center;
+
+        width: 50rem;
+        height: 100%;
+
+        label{
+            font-size: 20px;
+        }
+        input{
+            font-size: 15px;
+            width: 72%;
+            height: 3rem;
+        }
+    }
+    #boxEnvio{
+        height: 100%;
+        display: flex;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button{
+            width: 7rem;
+            height: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        a{
+            background-color: aquamarine;
+            width: 7rem;
+            height: 2rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            text-decoration: none;
+            color:black;
+        }
+    }
+}
